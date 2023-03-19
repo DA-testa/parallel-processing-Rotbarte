@@ -6,9 +6,8 @@ def parallel_processing(n, m, data):
     
     for i in range(m):
         
-       index,start=min(threads,key=lambda x:x[1]) 
-       
-       output.append((index,start+time))
+       index,start=min(threads,key=lambda x: x[1]) 
+       output.append((index,start))
        threads[index]=(index,start+data[i])
     return output
 
